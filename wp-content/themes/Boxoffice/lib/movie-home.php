@@ -1,5 +1,21 @@
 
 <div id="content">
+<!-- SLIDER 
+<script type="text/javascript" src="slider/engine2/jquery.js"></script>
+<div id="wowslider-de" style="margin-bottom:50px;">
+<div class="ws_images"><ul>
+		<li><a href="https://banners.livepartners.com/view.php?z=45796"><img src="slider/data2/images/denetbet.png" alt="de-netbet" title="de-netbet" id="wows2_0"/></a></li>
+		<li><a href="https://www.supergaminator.com/nrgs/de/landing?refererId=82407&lang=de???"><img src="slider/data2/images/supergaminator.jpg" alt="de-supergaminator" title="de-supergaminator" id="wows2_1"/></a></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="de-netbet"><span><img src="slider/data2/tooltips/denetbet.png" alt="de-netbet"/>1</span></a>
+		<a href="#" title="de-supergaminator"><span><img src="slider/data2/tooltips/supergaminator.jpg" alt="de-supergaminator"/>2</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com/vi">css slider</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="slider/engine2/wowslider.js"></script>
+<script type="text/javascript" src="slider/engine2/script.js"></script>
+-->
 <?php
 $temp = $wp_query;
 $wp_query= null;
@@ -7,6 +23,7 @@ $wp_query = new WP_Query();
 $wp_query->query('post_type=movies'.'&paged='.$paged);
 ?>
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>	
+
 
 <div class="box " id="post-<?php the_ID(); ?>">
 
@@ -37,7 +54,7 @@ if ( has_post_thumbnail() ) { ?>
 </div>
 </div>
 
-<?php if(++$counter % 3 == 0) : ?>
+<?php if(++$counter % 4 == 0) : ?>
 <div class="clear"></div>
 <?php endif; ?>
 
