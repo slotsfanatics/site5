@@ -13,9 +13,9 @@ $wp_query->query('post_type=movies'.'&paged='.$paged);
 <div class="boxim">
 <?php
 if ( has_post_thumbnail() ) { ?>
-	<a href="<?php the_permalink() ?>"><div class="boxim-frame"><span class="boxim-helper"></span><img class="boximg" src="<?php get_image_url(); ?>" alt=""/></div></a>
+	<a href="<?php echo get_post_meta($post->ID, 'wtf_video', true); ?>"><div class="boxim-frame"><span class="boxim-helper"></span><img class="boximg" src="<?php get_image_url(); ?>" alt=""/></div></a>
 <?php } else { ?>
-	<a href="<?php the_permalink() ?>"><img class="boximg" src="<?php bloginfo('template_directory'); ?>/images/dummy.png" alt="" /></a>
+	<a href="<?php echo get_post_meta($post->ID, 'wtf_video', true); ?>"><img class="boximg" src="<?php bloginfo('template_directory'); ?>/images/dummy.png" alt="" /></a>
 <?php } ?>
 
 <div class="scorebox">
@@ -26,7 +26,7 @@ if ( has_post_thumbnail() ) { ?>
 
 <div class="boxentry">
 <div class="btitle">
-	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
+	<h2><a href="<?php echo get_post_meta($post->ID, 'wtf_video', true); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
 	<span class="bonusammount"><?php echo get_post_meta($post->ID, 'wtf_ryear', true); ?>&nbsp;</span>
 	<?php echo get_post_meta($post->ID, 'wtf_dirctr', true); ?></a></h2>
 </div>
