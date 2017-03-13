@@ -64,3 +64,6 @@ if ( has_post_thumbnail() ) { ?>
 <?php getpagenavi(); ?>
 <?php $wp_query = null; $wp_query = $temp;?>
 </div>
+<div>
+<?php echo do_shortcode('[vegashero-lobby]'); ?>
+</div>
