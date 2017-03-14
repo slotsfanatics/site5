@@ -1,6 +1,6 @@
-
 <div id="content">
-<!-- SLIDER 
+<!-- SLIDER -->
+<?php if (qtranxf_getLanguage() == 'de') { ?>
 <script type="text/javascript" src="slider/engine2/jquery.js"></script>
 <div id="wowslider-de" style="margin-bottom:50px;">
 <div class="ws_images"><ul>
@@ -15,9 +15,29 @@
 </div>	
 <script type="text/javascript" src="slider/engine2/wowslider.js"></script>
 <script type="text/javascript" src="slider/engine2/script.js"></script>
--->
+<?php } ?>
+<!-- -->
 <?php
 $temp = $wp_query;
+$wp_query= null;
+$wp_query = new WP_Query();
+$wp_query->query('post_type=post'.'&p=1');
+while ($wp_query->have_posts()) : $wp_query->the_post(); 
+?>
+
+<div class="post" id="post-<?php the_ID(); ?>">
+<div class="title">
+<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+</div>
+
+<div class="entry">
+<?php the_content('Read the rest of this entry &raquo;'); ?>
+</div>
+<div class="clear"></div>
+<?php endwhile; ?>
+</div>
+
+<?php
 $wp_query= null;
 $wp_query = new WP_Query();
 $wp_query->query('post_type=movies'.'&paged='.$paged);
@@ -63,7 +83,24 @@ if ( has_post_thumbnail() ) { ?>
 <div class="clear"></div>
 <?php getpagenavi(); ?>
 <?php $wp_query = null; $wp_query = $temp;?>
-</div>
+
 <div>
+<?php $wp_query= null;
+$wp_query = new WP_Query();
+$wp_query->query('post_type=post'.'&p=8');
+while ($wp_query->have_posts()) : $wp_query->the_post(); 
+?>
+
+<div class="post" id="post-<?php the_ID(); ?>">
+<div class="title">
+<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+</div>
+</div>
+
+<div class="clear"></div>
+<?php endwhile; ?>
 <?php echo do_shortcode('[vegashero-lobby]'); ?>
+
+
+</div>
 </div>
