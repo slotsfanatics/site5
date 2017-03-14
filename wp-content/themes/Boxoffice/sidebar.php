@@ -2,7 +2,28 @@
 
 
 <div class="featbox">
-<h3 class="sidetitl "> Top Rated Casinos </h3>
+<h3 class="sidetitl "><?php 
+switch (qtranxf_getLanguage()) {
+    case 'de':
+        echo 'Top Bewertete Casinos';
+        break;
+    case 'se':
+        echo 'Topprankad Kasinon';
+        break;
+    case 'no':
+        echo 'Høyest Rangerte Casinos';
+        break;
+    case 'fi':
+        echo 'Suosituimmat Kasinot';
+        break;	
+    case 'nl':
+        echo 'Hoogst Gewaardeerd Casinos';
+        break;			
+    default:
+        echo 'Top Rated Casinos';
+}	
+
+?></h3>
 <?php
 $rate_query =  new WP_Query( array ( 'post_type' => 'movies', 'posts_per_page'=>'5' ) );
 while ( $rate_query->have_posts() ) : $rate_query->the_post();
