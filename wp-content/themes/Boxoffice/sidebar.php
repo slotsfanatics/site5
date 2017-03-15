@@ -32,7 +32,7 @@ while ( $rate_query->have_posts() ) : $rate_query->the_post();
 <div class="fblock clearfix">
 	<?php
 		if ( has_post_thumbnail() ) { ?>
-			<img class="thumbim" src="<?php get_image_url(); ?>" alt=""/>
+			<div class="thumbim-frame"><span class="boxim-helper"></span><img class="thumbim" src="<?php get_image_url(); ?>" alt=""/></div>
 	<?php } else { ?>
 			<img class="thumbim" src="<?php bloginfo('template_directory'); ?>/images/dummy.png" alt="" />
 	<?php } ?>

@@ -32,6 +32,17 @@ text-align: center; margin: 1em 0;
 background: url(images/top.png);
 }
 
+.thumbim-frame{
+height:60px;
+width:80px;
+white-space: nowrap;
+text-align: center; margin: 1em 0;
+background: url(images/top.png);
+	float:left;
+	margin:0px 10px 0px 0px;
+}
+
+
 .boxim-helper{
     display: inline-block;
     height: 100%;
@@ -48,7 +59,7 @@ img.boximg{
 
 
 .btitle{
-
+text-align:center;
 padding:7px 0px;	
 border-bottom:1px solid #c8bfb8;
 }
@@ -73,6 +84,7 @@ margin:0px 0px 0px 0px;
 
 .bmeta{
 	border-top:1px solid #fff;
+	text-align:center;
 }
 
 span.sholder{
@@ -94,12 +106,12 @@ span.scorebar{
 	height:15px;
 }
 .boxentry{
-	padding:0px 10px 10px 10px;
+	padding:0px 10px 5px 10px;
 	line-height:22px;
 }
 
 span.mgenre{
-	font-size:10px;
+	font-size:12px;
 	
 }
 

@@ -11,6 +11,7 @@
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="stylesheet" type="text/css" href="slider/engine2/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
 <?php 
 wp_enqueue_script('jquery');

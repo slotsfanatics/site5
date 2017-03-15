@@ -5,7 +5,7 @@
 <div id="wowslider-de" style="margin-bottom:50px;">
 <div class="ws_images"><ul>
 		<li><a href="https://banners.livepartners.com/view.php?z=45796"><img src="slider/data2/images/denetbet.png" alt="de-netbet" title="de-netbet" id="wows2_0"/></a></li>
-		<li><a href="https://www.supergaminator.com/nrgs/de/landing?refererId=82407&lang=de???"><img src="slider/data2/images/supergaminator.jpg" alt="de-supergaminator" title="de-supergaminator" id="wows2_1"/></a></li>
+		<li><a href="https://www.supergaminator.com/nrgs/de/landing?refererId=82407&lang=de"><img src="slider/data2/images/supergaminator.jpg" alt="de-supergaminator" title="de-supergaminator" id="wows2_1"/></a></li>
 	</ul></div>
 	<div class="ws_bullets"><div>
 		<a href="#" title="de-netbet"><span><img src="slider/data2/tooltips/denetbet.png" alt="de-netbet"/>1</span></a>
@@ -95,12 +95,12 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 <div class="title">
 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 </div>
-</div>
+
 
 <div class="clear"></div>
 <?php endwhile; ?>
 <?php echo do_shortcode('[vegashero-lobby]'); ?>
 
-
+</div>
 </div>
 </div>
